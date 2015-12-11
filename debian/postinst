@@ -1,5 +1,6 @@
 #!/bin/bash
 
+update-initramfs -k all -u
 alsactl reload
 pulseaudio -k
-echo We've killed PulseAudio. Please open pavucontrol or reboot your system to restart it.
+echo We have killed PulseAudio. Please open pavucontrol or reboot your system to restart it.

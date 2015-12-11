@@ -1,0 +1,16 @@
+Source: galliumos-baytrail
+Section: admin
+Priority: required
+Maintainer: Colton DRG <coltondrg@galliumos.org>
+XSBC-Original-Maintainer: Colton DRG <coltondrg@galliumos.org>
+Standards-Version: 3.9.1
+
+Package: galliumos-baytrail
+Architecture: all
+Priority: required
+Depends: galliumos-base
+Provides: galliumos-device
+Replaces: galliumos-haswell, galliumos-device-c710, galliumos-broadwell, pulseaudio
+Conflicts: galliumos-haswell, galliumos-device-c710, galliumos-broadwell
+Description: Gallium OS system files for Bay Trail ChromeOS devices
+ This package contains Bay Trail specific files for GalliumOS

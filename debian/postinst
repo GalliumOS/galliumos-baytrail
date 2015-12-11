@@ -1,0 +1,5 @@
+#!/bin/bash
+
+alsactl reload
+pulseaudio -k
+echo We've killed PulseAudio. Please open pavucontrol or reboot your system to restart it.

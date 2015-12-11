@@ -1,26 +1,4 @@
 #!/usr/bin/make -f
 
-package = galliumos-baytrail
-build:
-	touch build
-
-clean:
-	rm -f build
-	rm -f `find . -name "*~"`
-	rm -rf debian/tmp 
-
-binary-arch: build
-	rm -rf debian/tmp
-	install -d debian/tmp/DEBIAN
-	install -d debian/tmp/etc/pulse
-	install -d debian/tmp/lib/systemd/system-sleep
-	install -d debian/tmp/var/lib/alsa
-	install -p -m 644 etc/pulse/* debian/tmp/etc/pulse
-	install -p -m 644 var/lib/alsa/* debian/tmp/var/lib/alsa
-	install -p -m 755 lib/systemd/system-sleep/* debian/tmp/lib/systemd/system-sleep
-	dpkg-gencontrol -pgalliumos-baytrail
-	dpkg-deb --build -Zgzip debian/tmp ..
-
-binary: binary-arch
-
-.PHONY: binary binary-arch clean
+%:
+	dh $@

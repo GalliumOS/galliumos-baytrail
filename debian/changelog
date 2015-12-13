@@ -1,8 +1,15 @@
+galliumos-baytrail (1.0) vivid-galliumos; urgency=medium
+
+  * Initial actual release. Conflict with galliumos-sandy.
+
+ -- Colton DRG <coltondrg@galliumos.org>  Tue, 1 Sep 2015 22:16:16 -0600
+
 galliumos-baytrail (0.1.1) vivid-galliumos; urgency=medium
 
   * Fix everything... I guess...
 
  -- Colton DRG <coltondrg@galliumos.org>  Tue, 1 Sep 2015 22:16:16 -0600
+
 galliumos-baytrail (0.1) vivid-galliumos; urgency=medium
 
   * Initial pre-release.

@@ -1,3 +1,9 @@
+galliumos-baytrail (1.0.1) vivid-galliumos; urgency=medium
+
+  * Improved wifi sleep script and set swcrypto as a module option
+
+ -- Hugh Greenberg <hugh@galliumos.org>  Wed, 16 Dec 2015 22:16:16 -0600
+
 galliumos-baytrail (1.0) vivid-galliumos; urgency=medium
 
   * Initial actual release. Conflict with galliumos-sandy.

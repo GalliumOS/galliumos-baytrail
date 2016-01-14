@@ -12,5 +12,5 @@ Depends: galliumos-base
 Provides: galliumos-device
 Replaces: galliumos-haswell, galliumos-sandy, galliumos-broadwell, pulseaudio
 Conflicts: galliumos-haswell, galliumos-sandy, galliumos-broadwell
-Description: Gallium OS system files for Bay Trail ChromeOS devices
- This package contains Bay Trail specific files for GalliumOS
+Description: GalliumOS Bay Trail customiaztions
+ This package contains Bay Trail-specific files for GalliumOS

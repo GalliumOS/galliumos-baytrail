@@ -1,6 +1,8 @@
 #!/bin/bash
 
 alsactl restore
+echo "Audio may stop working after updating the galliumos-baytrail package"
+echo "Please reboot the computer."
 echo "----------IMPORTANT!----------"
 echo "Existing installs may have issues with the default sink in PulseAudio"
 echo "To fix this, please reboot the system or restart PulseAudio."

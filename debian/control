@@ -12,5 +12,5 @@ Depends: galliumos-base
 Provides: galliumos-device
 Replaces: galliumos-haswell, galliumos-sandy, galliumos-broadwell, pulseaudio
 Conflicts: galliumos-haswell, galliumos-sandy, galliumos-broadwell
-Description: GalliumOS Bay Trail customiaztions
+Description: GalliumOS Bay Trail customizations
  This package contains Bay Trail-specific files for GalliumOS

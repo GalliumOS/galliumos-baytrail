@@ -1,4 +1,4 @@
-state.PCH {
+state.Intel {
 	control.1 {
 		iface CARD
 		name 'HDMI/DP,pcm=3 Jack'
@@ -32,7 +32,7 @@ state.PCH {
 	control.4 {
 		iface MIXER
 		name 'IEC958 Playback Default'
-		value '0482000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
 		comment {
 			access 'read write'
 			type IEC958
@@ -233,7 +233,7 @@ state.bytmax98090 {
 	control.6 {
 		iface MIXER
 		name 'MIC2 Volume'
-		value 0
+		value 20
 		comment {
 			access 'read write'
 			type INTEGER
@@ -241,7 +241,7 @@ state.bytmax98090 {
 			range '0 - 20'
 			dbmin 0
 			dbmax 2000
-			dbvalue.0 0
+			dbvalue.0 2000
 		}
 	}
 	control.7 {
@@ -323,7 +323,7 @@ state.bytmax98090 {
 	control.13 {
 		iface MIXER
 		name 'ADCL Boost Volume'
-		value 0
+		value 4
 		comment {
 			access 'read write'
 			type INTEGER
@@ -331,13 +331,13 @@ state.bytmax98090 {
 			range '0 - 7'
 			dbmin 0
 			dbmax 4200
-			dbvalue.0 0
+			dbvalue.0 2400
 		}
 	}
 	control.14 {
 		iface MIXER
 		name 'ADCR Boost Volume'
-		value 0
+		value 4
 		comment {
 			access 'read write'
 			type INTEGER
@@ -345,13 +345,13 @@ state.bytmax98090 {
 			range '0 - 7'
 			dbmin 0
 			dbmax 4200
-			dbvalue.0 0
+			dbvalue.0 2400
 		}
 	}
 	control.15 {
 		iface MIXER
 		name 'ADCL Volume'
-		value 12
+		value 11
 		comment {
 			access 'read write'
 			type INTEGER
@@ -359,13 +359,13 @@ state.bytmax98090 {
 			range '0 - 15'
 			dbmin -1200
 			dbmax 300
-			dbvalue.0 0
+			dbvalue.0 -100
 		}
 	}
 	control.16 {
 		iface MIXER
 		name 'ADCR Volume'
-		value 12
+		value 11
 		comment {
 			access 'read write'
 			type INTEGER
@@ -373,13 +373,13 @@ state.bytmax98090 {
 			range '0 - 15'
 			dbmin -1200
 			dbmax 300
-			dbvalue.0 0
+			dbvalue.0 -100
 		}
 	}
 	control.17 {
 		iface MIXER
 		name 'ADC Oversampling Rate'
-		value '128*fs'
+		value '64*fs'
 		comment {
 			access 'read write'
 			type ENUMERATED
@@ -423,7 +423,7 @@ state.bytmax98090 {
 	control.21 {
 		iface MIXER
 		name 'SDIN Mode'
-		value true
+		value false
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -475,7 +475,7 @@ state.bytmax98090 {
 	control.26 {
 		iface MIXER
 		name 'Playback Path DC Blocking'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -505,9 +505,9 @@ state.bytmax98090 {
 			type INTEGER
 			count 1
 			range '0 - 30'
-			dbmin 50
-			dbmax 6050
-			dbvalue.0 50
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
 		}
 	}
 	control.29 {
@@ -773,7 +773,7 @@ state.bytmax98090 {
 	control.49 {
 		iface MIXER
 		name 'Speaker Left Mixer Volume'
-		value 3
+		value 2
 		comment {
 			access 'read write'
 			type INTEGER
@@ -781,13 +781,13 @@ state.bytmax98090 {
 			range '0 - 3'
 			dbmin -1200
 			dbmax 0
-			dbvalue.0 0
+			dbvalue.0 -600
 		}
 	}
 	control.50 {
 		iface MIXER
 		name 'Speaker Right Mixer Volume'
-		value 3
+		value 2
 		comment {
 			access 'read write'
 			type INTEGER
@@ -795,7 +795,7 @@ state.bytmax98090 {
 			range '0 - 3'
 			dbmin -1200
 			dbmax 0
-			dbvalue.0 0
+			dbvalue.0 -600
 		}
 	}
 	control.51 {
@@ -829,8 +829,8 @@ state.bytmax98090 {
 	control.53 {
 		iface MIXER
 		name 'Headphone Volume'
-		value.0 0
-		value.1 0
+		value.0 26
+		value.1 26
 		comment {
 			access 'read write'
 			type INTEGER
@@ -838,15 +838,15 @@ state.bytmax98090 {
 			range '0 - 31'
 			dbmin -6700
 			dbmax 300
-			dbvalue.0 -6700
-			dbvalue.1 -6700
+			dbvalue.0 0
+			dbvalue.1 0
 		}
 	}
 	control.54 {
 		iface MIXER
 		name 'Speaker Volume'
-		value.0 39
-		value.1 39
+		value.0 23
+		value.1 23
 		comment {
 			access 'read write'
 			type INTEGER
@@ -854,15 +854,15 @@ state.bytmax98090 {
 			range '0 - 39'
 			dbmin -4800
 			dbmax 1400
-			dbvalue.0 1400
-			dbvalue.1 1400
+			dbvalue.0 300
+			dbvalue.1 300
 		}
 	}
 	control.55 {
 		iface MIXER
 		name 'Receiver Volume'
-		value.0 31
-		value.1 31
+		value.0 21
+		value.1 21
 		comment {
 			access 'read write'
 			type INTEGER
@@ -870,8 +870,8 @@ state.bytmax98090 {
 			range '0 - 31'
 			dbmin -6200
 			dbmax 800
-			dbvalue.0 800
-			dbvalue.1 800
+			dbvalue.0 0
+			dbvalue.1 0
 		}
 	}
 	control.56 {
@@ -986,7 +986,7 @@ state.bytmax98090 {
 	}
 	control.67 {
 		iface MIXER
-		name 'Headphone Switch'
+		name 'HP Right Out Switch'
 		value false
 		comment {
 			access 'read write'
@@ -996,7 +996,7 @@ state.bytmax98090 {
 	}
 	control.68 {
 		iface MIXER
-		name 'Headset Mic Switch'
+		name 'HP Left Out Switch'
 		value false
 		comment {
 			access 'read write'
@@ -1005,26 +1005,6 @@ state.bytmax98090 {
 		}
 	}
 	control.69 {
-		iface MIXER
-		name 'Int Mic Switch'
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.70 {
-		iface MIXER
-		name 'Ext Spk Switch'
-		value true
-		comment {
-			access 'read write'
-			type BOOLEAN
-			count 1
-		}
-	}
-	control.71 {
 		iface MIXER
 		name 'MIXHPRSEL Mux'
 		value 'DAC Only'
@@ -1036,7 +1016,7 @@ state.bytmax98090 {
 			item.1 'HP Mixer'
 		}
 	}
-	control.72 {
+	control.70 {
 		iface MIXER
 		name 'MIXHPLSEL Mux'
 		value 'DAC Only'
@@ -1048,7 +1028,7 @@ state.bytmax98090 {
 			item.1 'HP Mixer'
 		}
 	}
-	control.73 {
+	control.71 {
 		iface MIXER
 		name 'LINMOD Mux'
 		value 'Left Only'
@@ -1060,7 +1040,7 @@ state.bytmax98090 {
 			item.1 'Left and Right'
 		}
 	}
-	control.74 {
+	control.72 {
 		iface MIXER
 		name 'Right Receiver Mixer Left DAC Switch'
 		value false
@@ -1070,7 +1050,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.75 {
+	control.73 {
 		iface MIXER
 		name 'Right Receiver Mixer Right DAC Switch'
 		value false
@@ -1080,7 +1060,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.76 {
+	control.74 {
 		iface MIXER
 		name 'Right Receiver Mixer LINEA Switch'
 		value false
@@ -1090,7 +1070,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.77 {
+	control.75 {
 		iface MIXER
 		name 'Right Receiver Mixer LINEB Switch'
 		value false
@@ -1100,7 +1080,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.78 {
+	control.76 {
 		iface MIXER
 		name 'Right Receiver Mixer MIC1 Switch'
 		value false
@@ -1110,7 +1090,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.79 {
+	control.77 {
 		iface MIXER
 		name 'Right Receiver Mixer MIC2 Switch'
 		value false
@@ -1120,7 +1100,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.80 {
+	control.78 {
 		iface MIXER
 		name 'Left Receiver Mixer Left DAC Switch'
 		value false
@@ -1130,7 +1110,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.81 {
+	control.79 {
 		iface MIXER
 		name 'Left Receiver Mixer Right DAC Switch'
 		value false
@@ -1140,7 +1120,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.82 {
+	control.80 {
 		iface MIXER
 		name 'Left Receiver Mixer LINEA Switch'
 		value false
@@ -1150,7 +1130,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.83 {
+	control.81 {
 		iface MIXER
 		name 'Left Receiver Mixer LINEB Switch'
 		value false
@@ -1160,7 +1140,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.84 {
+	control.82 {
 		iface MIXER
 		name 'Left Receiver Mixer MIC1 Switch'
 		value false
@@ -1170,7 +1150,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.85 {
+	control.83 {
 		iface MIXER
 		name 'Left Receiver Mixer MIC2 Switch'
 		value false
@@ -1180,7 +1160,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.86 {
+	control.84 {
 		iface MIXER
 		name 'Right Speaker Mixer Left DAC Switch'
 		value false
@@ -1190,7 +1170,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.87 {
+	control.85 {
 		iface MIXER
 		name 'Right Speaker Mixer Right DAC Switch'
 		value true
@@ -1200,7 +1180,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.88 {
+	control.86 {
 		iface MIXER
 		name 'Right Speaker Mixer LINEA Switch'
 		value false
@@ -1210,7 +1190,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.89 {
+	control.87 {
 		iface MIXER
 		name 'Right Speaker Mixer LINEB Switch'
 		value false
@@ -1220,7 +1200,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.90 {
+	control.88 {
 		iface MIXER
 		name 'Right Speaker Mixer MIC1 Switch'
 		value false
@@ -1230,7 +1210,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.91 {
+	control.89 {
 		iface MIXER
 		name 'Right Speaker Mixer MIC2 Switch'
 		value false
@@ -1240,7 +1220,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.92 {
+	control.90 {
 		iface MIXER
 		name 'Left Speaker Mixer Left DAC Switch'
 		value true
@@ -1250,7 +1230,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.93 {
+	control.91 {
 		iface MIXER
 		name 'Left Speaker Mixer Right DAC Switch'
 		value false
@@ -1260,7 +1240,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.94 {
+	control.92 {
 		iface MIXER
 		name 'Left Speaker Mixer LINEA Switch'
 		value false
@@ -1270,7 +1250,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.95 {
+	control.93 {
 		iface MIXER
 		name 'Left Speaker Mixer LINEB Switch'
 		value false
@@ -1280,7 +1260,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.96 {
+	control.94 {
 		iface MIXER
 		name 'Left Speaker Mixer MIC1 Switch'
 		value false
@@ -1290,7 +1270,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.97 {
+	control.95 {
 		iface MIXER
 		name 'Left Speaker Mixer MIC2 Switch'
 		value false
@@ -1300,7 +1280,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.98 {
+	control.96 {
 		iface MIXER
 		name 'Right Headphone Mixer Left DAC Switch'
 		value false
@@ -1310,7 +1290,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.99 {
+	control.97 {
 		iface MIXER
 		name 'Right Headphone Mixer Right DAC Switch'
 		value false
@@ -1320,7 +1300,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.100 {
+	control.98 {
 		iface MIXER
 		name 'Right Headphone Mixer LINEA Switch'
 		value false
@@ -1330,7 +1310,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.101 {
+	control.99 {
 		iface MIXER
 		name 'Right Headphone Mixer LINEB Switch'
 		value false
@@ -1340,7 +1320,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.102 {
+	control.100 {
 		iface MIXER
 		name 'Right Headphone Mixer MIC1 Switch'
 		value false
@@ -1350,7 +1330,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.103 {
+	control.101 {
 		iface MIXER
 		name 'Right Headphone Mixer MIC2 Switch'
 		value false
@@ -1360,7 +1340,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.104 {
+	control.102 {
 		iface MIXER
 		name 'Left Headphone Mixer Left DAC Switch'
 		value false
@@ -1370,7 +1350,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.105 {
+	control.103 {
 		iface MIXER
 		name 'Left Headphone Mixer Right DAC Switch'
 		value false
@@ -1380,7 +1360,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.106 {
+	control.104 {
 		iface MIXER
 		name 'Left Headphone Mixer LINEA Switch'
 		value false
@@ -1390,7 +1370,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.107 {
+	control.105 {
 		iface MIXER
 		name 'Left Headphone Mixer LINEB Switch'
 		value false
@@ -1400,7 +1380,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.108 {
+	control.106 {
 		iface MIXER
 		name 'Left Headphone Mixer MIC1 Switch'
 		value false
@@ -1410,7 +1390,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.109 {
+	control.107 {
 		iface MIXER
 		name 'Left Headphone Mixer MIC2 Switch'
 		value false
@@ -1420,7 +1400,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.110 {
+	control.108 {
 		iface MIXER
 		name 'STENR Mux'
 		value Normal
@@ -1432,7 +1412,7 @@ state.bytmax98090 {
 			item.1 'Sidetone Right'
 		}
 	}
-	control.111 {
+	control.109 {
 		iface MIXER
 		name 'STENL Mux'
 		value Normal
@@ -1444,7 +1424,7 @@ state.bytmax98090 {
 			item.1 'Sidetone Left'
 		}
 	}
-	control.112 {
+	control.110 {
 		iface MIXER
 		name 'LTENR Mux'
 		value Normal
@@ -1456,7 +1436,7 @@ state.bytmax98090 {
 			item.1 Loopthrough
 		}
 	}
-	control.113 {
+	control.111 {
 		iface MIXER
 		name 'LTENL Mux'
 		value Normal
@@ -1468,7 +1448,7 @@ state.bytmax98090 {
 			item.1 Loopthrough
 		}
 	}
-	control.114 {
+	control.112 {
 		iface MIXER
 		name 'LBENR Mux'
 		value Normal
@@ -1480,7 +1460,7 @@ state.bytmax98090 {
 			item.1 Loopback
 		}
 	}
-	control.115 {
+	control.113 {
 		iface MIXER
 		name 'LBENL Mux'
 		value Normal
@@ -1492,7 +1472,7 @@ state.bytmax98090 {
 			item.1 Loopback
 		}
 	}
-	control.116 {
+	control.114 {
 		iface MIXER
 		name 'Right ADC Mixer IN12 Switch'
 		value false
@@ -1502,7 +1482,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.117 {
+	control.115 {
 		iface MIXER
 		name 'Right ADC Mixer IN34 Switch'
 		value false
@@ -1512,7 +1492,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.118 {
+	control.116 {
 		iface MIXER
 		name 'Right ADC Mixer IN56 Switch'
 		value false
@@ -1522,7 +1502,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.119 {
+	control.117 {
 		iface MIXER
 		name 'Right ADC Mixer LINEA Switch'
 		value false
@@ -1532,7 +1512,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.120 {
+	control.118 {
 		iface MIXER
 		name 'Right ADC Mixer LINEB Switch'
 		value false
@@ -1542,7 +1522,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.121 {
+	control.119 {
 		iface MIXER
 		name 'Right ADC Mixer MIC1 Switch'
 		value false
@@ -1552,17 +1532,17 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.122 {
+	control.120 {
 		iface MIXER
 		name 'Right ADC Mixer MIC2 Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
 			count 1
 		}
 	}
-	control.123 {
+	control.121 {
 		iface MIXER
 		name 'Left ADC Mixer IN12 Switch'
 		value false
@@ -1572,7 +1552,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.124 {
+	control.122 {
 		iface MIXER
 		name 'Left ADC Mixer IN34 Switch'
 		value false
@@ -1582,7 +1562,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.125 {
+	control.123 {
 		iface MIXER
 		name 'Left ADC Mixer IN56 Switch'
 		value false
@@ -1592,7 +1572,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.126 {
+	control.124 {
 		iface MIXER
 		name 'Left ADC Mixer LINEA Switch'
 		value false
@@ -1602,7 +1582,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.127 {
+	control.125 {
 		iface MIXER
 		name 'Left ADC Mixer LINEB Switch'
 		value false
@@ -1612,7 +1592,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.128 {
+	control.126 {
 		iface MIXER
 		name 'Left ADC Mixer MIC1 Switch'
 		value false
@@ -1622,17 +1602,17 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.129 {
+	control.127 {
 		iface MIXER
 		name 'Left ADC Mixer MIC2 Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
 			count 1
 		}
 	}
-	control.130 {
+	control.128 {
 		iface MIXER
 		name 'LINEB Mixer IN2 Switch'
 		value false
@@ -1642,7 +1622,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.131 {
+	control.129 {
 		iface MIXER
 		name 'LINEB Mixer IN4 Switch'
 		value false
@@ -1652,7 +1632,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.132 {
+	control.130 {
 		iface MIXER
 		name 'LINEB Mixer IN6 Switch'
 		value false
@@ -1662,7 +1642,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.133 {
+	control.131 {
 		iface MIXER
 		name 'LINEB Mixer IN56 Switch'
 		value false
@@ -1672,7 +1652,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.134 {
+	control.132 {
 		iface MIXER
 		name 'LINEA Mixer IN1 Switch'
 		value false
@@ -1682,7 +1662,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.135 {
+	control.133 {
 		iface MIXER
 		name 'LINEA Mixer IN3 Switch'
 		value false
@@ -1692,7 +1672,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.136 {
+	control.134 {
 		iface MIXER
 		name 'LINEA Mixer IN5 Switch'
 		value false
@@ -1702,7 +1682,7 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.137 {
+	control.135 {
 		iface MIXER
 		name 'LINEA Mixer IN34 Switch'
 		value false
@@ -1712,10 +1692,10 @@ state.bytmax98090 {
 			count 1
 		}
 	}
-	control.138 {
+	control.136 {
 		iface MIXER
 		name 'DMIC Mux'
-		value ADC
+		value DMIC
 		comment {
 			access 'read write'
 			type ENUMERATED
@@ -1724,7 +1704,7 @@ state.bytmax98090 {
 			item.1 DMIC
 		}
 	}
-	control.139 {
+	control.137 {
 		iface MIXER
 		name 'MIC2 Mux'
 		value IN34
@@ -1736,7 +1716,7 @@ state.bytmax98090 {
 			item.1 IN56
 		}
 	}
-	control.140 {
+	control.138 {
 		iface MIXER
 		name 'MIC1 Mux'
 		value IN12
@@ -1746,6 +1726,46 @@ state.bytmax98090 {
 			count 1
 			item.0 IN12
 			item.1 IN56
+		}
+	}
+	control.139 {
+		iface MIXER
+		name 'Headphone Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.140 {
+		iface MIXER
+		name 'Headset Mic Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.141 {
+		iface MIXER
+		name 'Int Mic Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.142 {
+		iface MIXER
+		name 'Ext Spk Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
 		}
 	}
 }

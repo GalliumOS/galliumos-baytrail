@@ -1,3 +1,9 @@
+galliumos-baytrail (2.0) xenon; urgency=medium
+
+  * version bump for xenon
+
+ -- reynhout <reynhout@galliumos.org>  Wed, 30 Mar 2016 17:30:18 +0000
+
 galliumos-baytrail (1.1.1) vivid-galliumos; urgency=medium
 
   * Fixed #132 (GitHub.com/GalliumOS/galliumos-distro/issues/132)

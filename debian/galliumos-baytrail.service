@@ -1,0 +1,10 @@
+[Unit]
+Description=Sets Baytrail Specific Settings
+
+[Service]
+ExecStart=/usr/bin/init-baytrail-settings
+Type=oneshot
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

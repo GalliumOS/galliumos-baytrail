@@ -1,3 +1,9 @@
+galliumos-baytrail (2.0.1) xenon; urgency=medium
+
+  * Fixes for suspend/resume 
+
+ -- Hugh Greenberg <hugh@galliumos.org>  Wed, 16 Apr 2016 17:30:18 +0000
+
 galliumos-baytrail (2.0) xenon; urgency=medium
 
   * version bump for xenon

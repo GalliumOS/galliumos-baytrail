@@ -7,6 +7,7 @@ case $1/$2 in
             rmmod iwlmvm iwlwifi mac80211 cfg80211
             modprobe iwlwifi
             sleep 1
+            systemctl restart wpa_supplicant
             systemctl restart NetworkManager
 	    sleep 2
 	    WIFI=`nmcli d | grep wifi`

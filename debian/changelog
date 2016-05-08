@@ -1,3 +1,10 @@
+galliumos-baytrail (1.1.3) vivid-galliumos; urgency=medium
+
+  * Added BuildRequires in debian/control to depend on dh_systemd
+  * Added systemctl commands in postinst to ensure that the service is enabled
+
+ -- Hugh Greenberg <hugh@galliumos.org>  Sun, 8 May 2016 15:48:00 -0700
+
 galliumos-baytrail (1.1.2) vivid-galliumos; urgency=medium
 
   * Merged master changes

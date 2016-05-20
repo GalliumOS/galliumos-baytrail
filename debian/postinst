@@ -1,6 +1,7 @@
 #!/bin/bash
 
 systemctl daemon-reload
+systemctl unmask galliumos-baytrail
 systemctl enable galliumos-baytrail
 systemctl start galliumos-baytrail
 alsactl restore

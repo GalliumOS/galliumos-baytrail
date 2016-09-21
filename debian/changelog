@@ -1,3 +1,11 @@
+galliumos-baytrail (2.0.7) xenon; urgency=medium
+
+  * Add /etc/default/grub.d/galliumos-baytrail.cfg
+    - adds kernel boot param to enable ACPI GPIO lookup
+  * Run update-grub in postinst to pick up param changes
+
+ -- reynhout <reynhout@galliumos.org>  Wed, 21 Sep 2016 22:44:03 +0000
+
 galliumos-baytrail (2.0.6) xenon; urgency=medium
 
   * Changed postinst script to unmask galliumos-baytrail service

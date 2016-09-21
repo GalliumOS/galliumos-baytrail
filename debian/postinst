@@ -1,15 +1,35 @@
 #!/bin/bash
+#
+# galliumos-baytrail postinst
+#
+
+## Update GRUB when /etc/default/grub.d/galliumos-baytrail.cfg changes
+## TODO: only when it changes
+
+if [ -e /boot/grub/grub.cfg ] && which update-grub >/dev/null 2>&1; then
+  update-grub || true
+fi
+
+
+## PulseAudio manipulations. This might no longer be needed?
 
 systemctl daemon-reload
 systemctl unmask galliumos-baytrail
 systemctl enable galliumos-baytrail
 systemctl start galliumos-baytrail
 alsactl restore
-echo "Audio may stop working after updating the galliumos-baytrail package"
-echo "Please reboot the computer."
-echo "----------IMPORTANT!----------"
-echo "Existing installs may have issues with the default sink in PulseAudio"
-echo "To fix this, please reboot the system or restart PulseAudio."
-echo "If it still doesn't work, change the default sink in pavucontrol to"
-echo "byt-max98090."
+
+cat <<EOF
+  ----------IMPORTANT!----------
+
+  Package galliumos-baytrail has been updated. Audio might not work as
+  expected until after reboot.
+
+  You might also need to configure your default audio sink for PulseAudio.
+
+  If audio does not work after reboot, you should use pavucontrol to set
+  your default audio sink to byt-max98090.
+
+EOF
+
 exit 0

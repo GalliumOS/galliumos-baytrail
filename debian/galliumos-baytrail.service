@@ -1,5 +1,5 @@
 [Unit]
-Description=Sets Baytrail Specific Settings
+Description=GalliumOS system customization for Bay Trail models
 
 [Service]
 ExecStart=/usr/bin/init-baytrail-settings

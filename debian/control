@@ -11,7 +11,7 @@ Architecture: all
 Priority: required
 Depends: galliumos-base
 Provides: galliumos-device
-Replaces: galliumos-haswell, galliumos-sandy, galliumos-broadwell, pulseaudio
-Conflicts: galliumos-haswell, galliumos-sandy, galliumos-broadwell
+Conflicts: galliumos-sandy, galliumos-haswell, galliumos-broadwell, galliumos-braswell, galliumos-skylake, galliumos-samus
+Replaces: pulseaudio
 Description: GalliumOS Bay Trail customizations
  This package contains Bay Trail-specific files for GalliumOS

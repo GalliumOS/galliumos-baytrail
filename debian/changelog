@@ -1,3 +1,9 @@
+galliumos-baytrail (2.0.10) xenon; urgency=medium
+
+  * rename custom GRUB config for lexical load order
+
+ -- reynhout <reynhout@galliumos.org>  Mon, 23 Jan 2017 03:21:08 +0000
+
 galliumos-baytrail (2.0.9) xenon; urgency=medium
 
   * set empty GRUB_BACKGROUND for Bay Trail

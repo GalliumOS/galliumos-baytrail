@@ -1,3 +1,9 @@
+galliumos-baytrail (2.0.12) xenon; urgency=medium
+
+  * Add linux-image-galliumos-baytrail to Pre-depends
+
+ -- reynhout <reynhout@galliumos.org>  Thu, 23 Mar 2017 18:11:23 +0000
+
 galliumos-baytrail (2.0.11) xenon; urgency=medium
 
   * Add linux-image-galliumos-baytrail to depends

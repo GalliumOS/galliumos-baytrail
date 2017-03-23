@@ -9,8 +9,7 @@ Standards-Version: 3.9.1
 Package: galliumos-baytrail
 Architecture: all
 Priority: required
-Depends: galliumos-base
-Pre-Depends: linux-image-galliumos-baytrail
+Depends: galliumos-base, linux-image-galliumos-baytrail
 Provides: galliumos-device
 Conflicts: galliumos-sandy, galliumos-haswell, galliumos-broadwell, galliumos-braswell, galliumos-skylake, galliumos-samus
 Replaces: pulseaudio

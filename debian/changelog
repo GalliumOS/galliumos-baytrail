@@ -1,6 +1,6 @@
 galliumos-baytrail (2.0.12) xenon; urgency=medium
 
-  * Add linux-image-galliumos-baytrail to Pre-depends
+  * Clean up postinst messaging
 
  -- reynhout <reynhout@galliumos.org>  Thu, 23 Mar 2017 18:11:23 +0000
 

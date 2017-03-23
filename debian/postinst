@@ -19,17 +19,4 @@ systemctl enable galliumos-baytrail
 systemctl start galliumos-baytrail
 alsactl restore
 
-cat <<EOF
-  ----------IMPORTANT!----------
-
-  Package galliumos-baytrail has been updated. Audio might not work as
-  expected until after reboot.
-
-  You might also need to configure your default audio sink for PulseAudio.
-
-  If audio does not work after reboot, you should use pavucontrol to set
-  your default audio sink to byt-max98090.
-
-EOF
-
 exit 0

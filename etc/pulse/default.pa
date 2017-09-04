@@ -160,5 +160,21 @@ load-module module-filter-apply
 #.endif
 
 ### Make some devices default
-set-default-sink alsa_output.platform-byt-max98090.analog-stereo
+#set-default-sink output
 #set-default-source input
+
+
+### GalliumOS
+## sysfs paths from `pacmd list-sinks | grep sysfs.path`
+
+.nofail
+
+## BayTrail-generic (Realtek ALC5645 codec)
+## RW_LEGACY /sys/devices/platform/80860F28:00/byt-max98090
+## full ROM  /sys/devices/pci...?
+
+#.ifexists /sys/devices/platform/80860F28:00/byt-max98090
+set-default-sink   alsa_output.platform-byt-max98090.HiFi__hw_bytmax98090__sink
+set-sink-port      alsa_output.platform-byt-max98090.HiFi__hw_bytmax98090__sink [Out] Speakers
+set-default-source alsa_input.platform-byt-max98090.HiFi__hw_bytmax98090__source
+#.endif

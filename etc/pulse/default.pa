@@ -169,12 +169,25 @@ load-module module-filter-apply
 
 .nofail
 
-## BayTrail-generic (Realtek ALC5645 codec)
-## RW_LEGACY /sys/devices/platform/80860F28:00/byt-max98090
-## full ROM  /sys/devices/pci...?
-
-#.ifexists /sys/devices/platform/80860F28:00/byt-max98090
+## Bay Trail (Maxim MAX98090 codec)
+## RW_LEGACY
+.ifexists /sys/devices/platform/80860F28:00/byt-max98090
 set-default-sink   alsa_output.platform-byt-max98090.HiFi__hw_bytmax98090__sink
 set-sink-port      alsa_output.platform-byt-max98090.HiFi__hw_bytmax98090__sink [Out] Speakers
 set-default-source alsa_input.platform-byt-max98090.HiFi__hw_bytmax98090__source
-#.endif
+.endif
+## full ROM  /sys/devices/pci...?
+
+## Bay Trail (Maxim MAX98090 codec) using cht-bsw driver
+## RW_LEGACY
+.ifexists /sys/devices/platform/80860F28:00/cht-bsw-max98090
+set-default-sink   alsa_output.platform-cht-bsw-max98090.HiFi__hw_chtmax98090__sink
+set-sink-port      alsa_output.platform-cht-bsw-max98090.HiFi__hw_chtmax98090__sink [Out] Speakers
+set-default-source alsa_input.platform-cht-bsw-max98090.HiFi__hw_chtmax98090__source
+.endif
+## full ROM
+.ifexists /sys/devices/pci0000:00/80860F28:00/cht-bsw-max98090
+set-default-sink   alsa_output.platform-cht-bsw-max98090.HiFi__hw_chtmax98090__sink
+set-sink-port      alsa_output.platform-cht-bsw-max98090.HiFi__hw_chtmax98090__sink [Out] Speakers
+set-default-source alsa_input.platform-cht-bsw-max98090.HiFi__hw_chtmax98090__source
+.endif

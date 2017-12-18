@@ -1,3 +1,11 @@
+galliumos-baytrail (2.0.14) xenon; urgency=medium
+
+  * Update Maxim MAX98090 driver config
+    - add ALSA UCM files for chtmax98090
+  * Add sink and source selections for new driver
+
+ -- reynhout <reynhout@galliumos.org>  Mon, 18 Dec 2017 23:24:51 +0000
+
 galliumos-baytrail (2.0.13) xenon; urgency=medium
 
   * Update Maxim MAX98090 driver config

@@ -1,3 +1,9 @@
+galliumos-baytrail (2.9901) bismuth; urgency=medium
+
+  * Prepare for GalliumOS 3.0
+
+ -- reynhout <reynhout@galliumos.org>  Sun, 06 May 2018 07:04:41 +0000
+
 galliumos-baytrail (2.0.14) xenon; urgency=medium
 
   * Update Maxim MAX98090 driver config

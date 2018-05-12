@@ -1,9 +1,8 @@
 Source: galliumos-baytrail
 Section: admin
 Priority: required
-Maintainer: Colton DRG <coltondrg@galliumos.org>
+Maintainer: GalliumOS <galliumos@galliumos.org>
 Build-Depends: debhelper (>= 8), dh-systemd
-XSBC-Original-Maintainer: Colton DRG <coltondrg@galliumos.org>
 Standards-Version: 3.9.1
 
 Package: galliumos-baytrail
